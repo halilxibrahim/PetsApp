@@ -49,7 +49,7 @@ const Activity = () => {
       <Text style={styles.text}>{item.text}</Text>
       
       <TouchableOpacity onPress={() => deleteItem(item.id)}>
-        <Text style={styles.deleteButtonText}>Sil</Text>
+        <Text style={styles.deleteButtonText}>❌</Text>
       </TouchableOpacity>
     </View>
   );
@@ -63,7 +63,7 @@ const Activity = () => {
           onChangeText={setText}
           placeholder="Metin girin"
         />
-        {/* ImagePicker ve renk seçici bileşenleri buraya eklenecek */}
+        {/* ImagePicker kütüphanesi eklenecek */}
         <Button title="Resim Seç" onPress={() => {/* Resim seçme işlevi */}} />
         <Button title="Öğe Ekle" onPress={addNewItem} />
       </View>
@@ -87,6 +87,16 @@ const styles = StyleSheet.create({
     backgroundColor: '#5C68FF',
     borderRadius:16,
   },
+  formContainer: {
+    flexDirection: 'row',
+    borderWidth: 2,
+    borderColor:'blue',
+    padding:5,
+    margin:15,
+    alignItems: 'center',
+    backgroundColor:'white',
+  },
+
   image: {
     width: 60, // Resim genişliği
     height: 60, // Resim yüksekliği
